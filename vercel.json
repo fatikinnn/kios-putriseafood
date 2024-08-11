@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "builds": [
       {
         "src": "public/**/*",
@@ -7,3 +8,18 @@
     ]
   }
   
+=======
+  "builds": [
+    {
+      "src": "public/index.php",
+      "use": "@vercel/php"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.php"
+    }
+  ]
+}
+>>>>>>> fb063a869a13483d20fdafbbb344c8c2c39d603b
