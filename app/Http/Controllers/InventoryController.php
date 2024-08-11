@@ -9,7 +9,7 @@ class InventoryController extends Controller
 {
     public function index()
     {
-        $inventory = Inventory::with(['pembelian', 'penjualan', 'produk'])->orderBy('created_at', 'asc')->get();
+        $inventory = Inventory::with(['pembelian', 'penjualan', 'produk'])->orderBy('created_at', 'desc')->get();
         return view('inventory.index', compact('inventory'));
     }
 

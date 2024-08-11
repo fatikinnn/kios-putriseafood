@@ -32,6 +32,8 @@ Route::get('/', fn () => redirect()->route('login'));
 Route::group(['middleware' => 'auth'], function (){
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/api/pendapatan', [DashboardController::class, 'getPendapatanData'])->name('api.pendapatan');
+    Route::get('/dashboard/getPendapatanData', [DashboardController::class, 'getPendapatanData']);
+
 
 
 
